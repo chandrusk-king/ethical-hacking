@@ -1,0 +1,237 @@
+(crypl㉿vbox)-[~]
+└─$ nmap -sn google.com 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:03 EDT
+Nmap scan report for google.com (142.251.221.110)
+Host is up (0.0017s latency).
+Other addresses for google.com (not scanned): 2404:6800:4007:821::200e
+rDNS record for 142.251.221.110: cgk03s03-in-f14.1e100.net
+Nmap done: 1 IP address (1 host up) scanned in 0.12 seconds
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -sS google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:05 EDT
+Nmap scan report for google.com (142.251.221.110)
+Host is up (0.0023s latency).
+Other addresses for google.com (not scanned): 2404:6800:4007:831::200e
+rDNS record for 142.251.221.110: cgk03s03-in-f14.1e100.net
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+81/tcp   open  hosts2-ns
+443/tcp  open  https
+3128/tcp open  squid-http
+
+Nmap done: 1 IP address (1 host up) scanned in 4.88 seconds
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -sV google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:05 EDT
+Stats: 0:00:14 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 72.20% done; ETC: 05:05 (0:00:05 remaining)
+Stats: 0:01:25 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 33.33% done; ETC: 05:07 (0:00:36 remaining)
+Stats: 0:02:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.97% done; ETC: 05:07 (0:00:00 remaining)
+Stats: 0:02:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.97% done; ETC: 05:07 (0:00:00 remaining)
+Stats: 0:02:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.97% done; ETC: 05:07 (0:00:00 remaining)
+Stats: 0:02:21 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 05:07 (0:00:00 remaining)
+Nmap scan report for google.com (142.251.221.110)
+Host is up (0.025s latency).
+Other addresses for google.com (not scanned): 2404:6800:4007:831::200e
+rDNS record for 142.251.221.110: lcmaaa-az-in-f14.1e100.net
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy Squid http proxy 6.9
+81/tcp  open  http-proxy Squid http proxy 6.9
+443/tcp open  ssl/https  gws
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=7/17%Time=6A59F0A7%P=x86_64-pc-linux-
+SF:gnu%r(GetRequest,39B5,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/
+SF:html;\x20charset=ISO-8859-1\r\nDate:\x20Fri,\x2017\x20Jul\x202026\x2009
+SF::06:49\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20private,\x20max-ag
+SF:e=0\r\nContent-Security-Policy-Report-Only:\x20object-src\x20'none';bas
+SF:e-uri\x20'self';script-src\x20'nonce-MuGsSeCJ1HugHq4LWC67aQ'\x20'strict
+SF:-dynamic'\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20htt
+SF:ps:\x20http:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-h
+SF:p\r\nAccept-CH:\x20Sec-CH-Prefers-Color-Scheme\r\nP3P:\x20CP=\"This\x20
+SF:is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phelp\x20for\x20more
+SF:\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x200\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nSet-Cookie:\x20__Secure-STRP=ANmZwa3pz3kt-iZqmNR
+SF:2VMibnUcejIDOcCoSgXOo42113c7Z0_y9cCpqJAyTZRyS76hIWooGcBeyYXVOiiYd6bx81X
+SF:VH5I42Lw;\x20expires=Fri,\x2017-Jul-2026\x2009:11:49\x20GMT;\x20path=/;
+SF:\x20domain=\.google\.com;\x20Secure;\x20SameSite=strict\r\nSet-Cookie:\
+SF:x20AEC=AdJVEauSsCtBZB_X9p89ei6zgyMWzm1Gkbi3ELZivJ_q9zHQpD0DvcVDnfw;\x20
+SF:expires=Wed,\x2013-Jan-2027\x2009:06:49\x20GMT;\x20pa")%r(tor-versions,
+SF:B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2017\x20Jul\
+SF:x202026\x2009:06:49\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x2
+SF:0Request\)!!1</title></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 161.79 seconds
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -p 80 --script http-header google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:09 EDT
+NSE: failed to initialize the script engine:
+/usr/share/nmap/nse_main.lua:829: 'http-header' did not match a category, filename, or directory
+stack traceback:
+        [C]: in function 'error'
+        /usr/share/nmap/nse_main.lua:829: in local 'get_chosen_scripts'
+        /usr/share/nmap/nse_main.lua:1364: in main chunk
+        [C]: in ?
+
+QUITTING!
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -sL google.com                      
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:09 EDT
+Nmap scan report for google.com (172.217.24.206)
+Other addresses for google.com (not scanned): 2404:6800:4007:836::200e
+rDNS record for 172.217.24.206: hkg12s13-in-f14.1e100.net
+Nmap done: 1 IP address (0 hosts up) scanned in 0.04 seconds
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -sU google.com 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:10 EDT
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 26.65% done; ETC: 05:16 (0:04:10 remaining)
+Stats: 0:01:36 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 27.20% done; ETC: 05:16 (0:04:17 remaining)
+
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -O google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:18 EDT
+Nmap scan report for google.com (142.251.221.110)
+Host is up (0.0039s latency).
+Other addresses for google.com (not scanned): 2404:6800:4007:83f::200e
+rDNS record for 142.251.221.110: cgk03s03-in-f14.1e100.net
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+81/tcp   open  hosts2-ns
+443/tcp  open  https
+3128/tcp open  squid-http
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: bridge|general purpose
+Running (JUST GUESSING): Oracle Virtualbox (98%), QEMU (94%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:qemu:qemu
+Aggressive OS guesses: Oracle Virtualbox (98%), QEMU user mode network gateway (94%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.56 seconds
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -O flipkart.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:19 EDT
+Nmap scan report for flipkart.com (103.243.32.90)
+Host is up (0.0062s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+81/tcp   open  hosts2-ns
+443/tcp  open  https
+3128/tcp open  squid-http
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|bridge|switch|printer
+Running (JUST GUESSING): QEMU (96%), Oracle Virtualbox (96%), Bay Networks embedded (88%), Samsung embedded (88%), Dell embedded (88%), Wind River VxWorks (88%), Xerox embedded (87%), Allied Telesyn embedded (86%)
+OS CPE: cpe:/a:qemu:qemu cpe:/o:oracle:virtualbox cpe:/h:baynetworks:baystack_450 cpe:/h:samsung:clp-315w cpe:/h:dell:1815dn cpe:/o:windriver:vxworks cpe:/h:xerox:workcentre_4150 cpe:/h:alliedtelesyn:at-9006
+Aggressive OS guesses: QEMU user mode network gateway (96%), Oracle Virtualbox (96%), Bay Networks BayStack 450 switch (software version 3.1.0.22) (88%), Samsung CLP-315W printer (88%), Dell 1815dn printer (88%), VxWorks (88%), Xerox WorkCentre 4150 printer (87%), Allied Telesyn AT-9006SX/SC switch (86%), Samsung CLP-310N or CLX-3175RW, or Xerox Phaser 6110 printer (86%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 35.30 seconds
+                                                                                                                                                                                                                                    
+┌──(crypl㉿vbox)-[~]
+└─$ nmap -A flipkart.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-07-17 05:20 EDT
+Nmap scan report for flipkart.com (103.243.32.90)
+Host is up (0.0032s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http-proxy Squid http proxy 6.9
+|_http-title: Did not follow redirect to https://flipkart.com:443/
+|_http-open-proxy: Proxy might be redirecting requests
+81/tcp   open  http-proxy Squid http proxy 6.9
+443/tcp  open  ssl/https  nginx
+|_http-server-header: nginx
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck, RTSPRequest, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 503 Service Unavailable
+|     content-length: 107
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>503 Service Unavailable</h1>
+|     server is available to handle this request.
+|_    </body></html>
+| ssl-cert: Subject: commonName=www.flipkart.com/organizationName=FLIPKART INTERNET PRIVATE LIMITED/stateOrProvinceName=Karnataka/countryName=IN
+| Subject Alternative Name: DNS:www.flipkart.com, DNS:tech.flipkart.com, DNS:bhaskar.store.flipkart.com, DNS:minutes.flipkart.com, DNS:2.uiscoop.flipkart.com, DNS:accounts.flipkart.com, DNS:indusind.store.flipkart.com, DNS:offers.store.flipkart.com, DNS:axis.store.flipkart.com, DNS:airtel.store.flipkart.com, DNS:id.flipkart.com, DNS:itzcash.store.flipkart.com, DNS:m.flipkart.com, DNS:yahoo.store.flipkart.com, DNS:insurance.flipkart.com, DNS:auth.flipkart.com, DNS:1.uiscoop.flipkart.com, DNS:pay.flipkart.com, DNS:yono.store.flipkart.com, DNS:dl.flipkart.com, DNS:flipkart.com
+| Not valid before: 2026-06-28T04:16:54
+|_Not valid after:  2027-01-13T04:16:54
+|_http-title: Did not follow redirect to https://www.flipkart.com/
+3128/tcp open  http-proxy Squid http proxy 6.9
+|_http-title: Access Denied
+|_http-server-header: squid/6.9
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=7/17%Time=6A59F3EA%P=x86_64-pc-linux-
+SF:gnu%r(GetRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\ncont
+SF:ent-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20te
+SF:xt/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Service\x
+SF:20Unavailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handle\x20
+SF:this\x20request\.\n</body></html>\n")%r(HTTPOptions,E9,"HTTP/1\.1\x2050
+SF:3\x20Service\x20Unavailable\r\ncontent-length:\x20107\r\ncache-control:
+SF:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\
+SF:r\n<html><body><h1>503\x20Service\x20Unavailable</h1>\nNo\x20server\x20
+SF:is\x20available\x20to\x20handle\x20this\x20request\.\n</body></html>\n"
+SF:)%r(FourOhFourRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\
+SF:ncontent-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\
+SF:x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Serv
+SF:ice\x20Unavailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handl
+SF:e\x20this\x20request\.\n</body></html>\n")%r(tor-versions,CF,"HTTP/1\.1
+SF:\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x2
+SF:0no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n
+SF:<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20
+SF:an\x20invalid\x20request\.\n</body></html>\n")%r(RTSPRequest,CF,"HTTP/1
+SF:\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:
+SF:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\
+SF:r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\
+SF:x20an\x20invalid\x20request\.\n</body></html>\n")%r(RPCCheck,CF,"HTTP/1
+SF:\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:
+SF:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\
+SF:r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\
+SF:x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTC
+SF:P,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCa
+SF:che-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20te
+SF:xt/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brow
+SF:ser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|bridge|switch|printer
+Running (JUST GUESSING): QEMU (96%), Oracle Virtualbox (96%), Bay Networks embedded (88%), Samsung embedded (88%), Dell embedded (88%), Wind River VxWorks (88%), Xerox embedded (87%), Allied Telesyn embedded (86%)
+OS CPE: cpe:/a:qemu:qemu cpe:/o:oracle:virtualbox cpe:/h:baynetworks:baystack_450 cpe:/h:samsung:clp-315w cpe:/h:dell:1815dn cpe:/o:windriver:vxworks cpe:/h:xerox:workcentre_4150 cpe:/h:alliedtelesyn:at-9006
+Aggressive OS guesses: QEMU user mode network gateway (96%), Oracle Virtualbox (96%), Bay Networks BayStack 450 switch (software version 3.1.0.22) (88%), Samsung CLP-315W printer (88%), Dell 1815dn printer (88%), VxWorks (88%), Xerox WorkCentre 4150 printer (87%), Allied Telesyn AT-9006SX/SC switch (86%), Samsung CLP-310N or CLX-3175RW, or Xerox Phaser 6110 printer (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   2.12 ms 10.0.2.2
+2   2.21 ms 103.243.32.90
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 114.04 seconds
